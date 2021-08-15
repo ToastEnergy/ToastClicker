@@ -1,0 +1,43 @@
+body {
+  background: url('background.png');
+  background-size: 180px;
+  color: white;
+  overflow: hidden;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+#toast {
+  width: 100px;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+#start {
+  font-family: 'Ubuntu Mono', monospace;
+  outline: none;
+  border: none;
+  font-size: 30px;
+  background: #B8844A;
+  color: white;
+  box-shadow: 6px 6px #B49971;
+  transition-duration: .3s;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+#start:hover {
+  box-shadow: 10px 10px #B49971;
+}
+
+.time {
+  font-size: 200%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  background: RGBA(0,0,0,0.5);
+}
