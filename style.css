@@ -8,6 +8,7 @@ body {
 
 #toast {
   width: 200px;
+  cursor: pointer;
   user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
