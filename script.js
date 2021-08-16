@@ -17,9 +17,11 @@ function randomPos(item) {
     let bestTime = Math.min(...times);
     let avTime = (times.reduce((a, b) => a + b, 0)) / times.length;
     let best = document.createElement("p");
-    best.innerText = `Best: ${bestTime / 1000} seconds`;
+    best.innerText = `Best: ${Math.round(((bestTime / 1000) + Number.EPSILON) * 100) / 100
+} seconds`;
     let average = document.createElement("p");
-    average.innerText = `Average: ${avTime / 1000} seconds`;
+    average.innerText = `Average: ${Math.round(((avTime / 1000) + Number.EPSILON) * 100) / 100
+} seconds`;
     time.appendChild(best);
     time.appendChild(average);
     document.getElementById("start").style.display = "unset";
