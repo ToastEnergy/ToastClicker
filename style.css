@@ -1,3 +1,8 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: url('background.png');
   background-size: 200px;
@@ -14,6 +19,12 @@ body {
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
+}
+
+@media (max-width: 600px) {
+  #toast {
+    width: 150px;
+  }
 }
 
 #start {
@@ -33,12 +44,25 @@ body {
   box-shadow: 10px 10px #B49971;
 }
 
-.time {
-  font-size: 300%;
+.banner-parent {
   position: absolute;
-  top: 50%;
   width: 100%;
-  transform: translateY(-50%);
-  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
   background: RGBA(0,0,0,0.5);
+}
+
+.banner-child {
+  font-size: 300%;
+  text-align: center;
+}
+
+.hide {
+  transform: translate(200%, 200%);
 }

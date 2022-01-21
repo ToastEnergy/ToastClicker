@@ -1,13 +1,14 @@
-let start;
-let times;
+let start, times;
+let banner = document.querySelector('.banner-parent');
+let startButton = document.getElementById('start');
 
-function startGame(button) {
+startButton.addEventListener('click', startGame);
+function startGame() {
   times = [];
-  let item = document.getElementById("toast");
-  item.style.display = "unset";
-  button.style.display = "none";
-  document.getElementById("time").innerText = "";
-  randomPos(item);
+  let toast = document.getElementById("toast");
+  toast.style.display = "unset";
+  banner.classList.add('hide');
+  randomPos(toast);
 };
 
 function randomPos(item) {
@@ -24,13 +25,11 @@ function randomPos(item) {
 } seconds`;
     time.appendChild(best);
     time.appendChild(average);
-    document.getElementById("start").style.display = "unset";
-    console.log(times);
+    banner.classList.remove('hide');
     return
   };
   if (start) {
     const millis = Date.now() - start;
-    // document.getElementById("time").innerHTML = `${millis / 1000} seconds`;
     times.push(millis);
   }
   x = between(1, window.innerWidth-item.width-20);
@@ -47,9 +46,6 @@ function between(min, max) {
 };
 
 window.onload = function() {
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    document.getElementById("css").href = "mobile.css";
-  };
   let item = document.getElementById("toast");
   item.style.marginLeft = `${(window.innerWidth / 2) - (item.width / 2)}px`;
   item.style.marginTop = `${(window.innerHeight / 2) - (item.height / 2)}px`;

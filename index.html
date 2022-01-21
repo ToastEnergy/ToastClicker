@@ -15,11 +15,15 @@
     <link rel="stylesheet" href="style.css" type="text/css" id="css">
   </head>
   <body>
-    <div class="time">
-      <div id="time">
-        <p>Be fast to click the toast</p>
+    <div class="banner-parent">
+      <div class="banner">
+        <div class="banner-child">
+          <div id="time">
+            <p>Be fast to click the toast</p>
+          </div>
+          <button type="button" name="start" id="start">Start</button>
+        </div>
       </div>
-      <button type="button" name="start" onclick="startGame(this)" id="start">Start</button>
     </div>
     <img style="display:none;" src="https://cdn.toastenergy.xyz/toast.png" alt="Toast" id="toast" onclick="randomPos(this)">
     <script src="script.js" type="text/javascript"></script>
